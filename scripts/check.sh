@@ -8,20 +8,20 @@ fi
 
 if [[ "$CHECK" == "all" || "$CHECK" == "type" || "$CHECK" == "mypy" ]]; then
     echo "Pythonの型チェック中(mypy)..."
-    poetry run mypy api
+    uv run mypy api
 fi
 
 if [[ "$CHECK" == "all" || "$CHECK" == "format" || "$CHECK" == "lint" || "$CHECK" == "black" ]]; then
     echo "Pythonコードスタイルのチェック中(black)..."
-    poetry run black api tests --check --diff
+    uv run black api tests --check --diff
 fi
 
 if [[ "$CHECK" == "all" || "$CHECK" == "format" || "$CHECK" == "lint" || "$CHECK" == "ruff" ]]; then
     echo "Pythonコードスタイルのチェック中(ruff)..."
-    poetry run ruff check api tests
+    uv run ruff check api tests
 fi
 
 if [[ "$CHECK" == "all"  || "$CHECK" == "lint" || "$CHECK" == "flake8" ]]; then
     echo "Pythonコードスタイルのチェック中(flake8)..."
-    poetry run flake8 --config=scripts/.flake8 api tests
+    uv run flake8 --config=scripts/.flake8 api tests
 fi

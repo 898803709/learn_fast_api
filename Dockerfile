@@ -1,5 +1,5 @@
 # Use the official Python image with version 3.12.0 from Docker Hub
-FROM python:3.12.0
+FROM python:3.12.7
 
 # Define /app as the working directory within the container
 WORKDIR /app

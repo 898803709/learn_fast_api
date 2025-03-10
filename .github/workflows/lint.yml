@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - '**/*.py'
+      - '**/*.yml'
       - pyproject.toml
       - poetry.lock
       - ./scripts/check.sh
@@ -13,6 +14,7 @@ on:
       - main
     paths:
       - '**/*.py'
+      - '**/*.yml'
       - pyproject.toml
       - poetry.lock
       - ./scripts/check.sh
@@ -23,10 +25,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install deps
-        run: |
-          sudo apt-get install libmagic1 jlha-utils
 
       - name: "Set up Python"
         uses: actions/setup-python@v5

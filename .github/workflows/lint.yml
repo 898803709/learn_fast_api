@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - '**/*.py'
+      - '**/*.yml'
       - pyproject.toml
       - poetry.lock
       - ./scripts/check.sh
@@ -13,6 +14,7 @@ on:
       - main
     paths:
       - '**/*.py'
+      - '**/*.yml'
       - pyproject.toml
       - poetry.lock
       - ./scripts/check.sh

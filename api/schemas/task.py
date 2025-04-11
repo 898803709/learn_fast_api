@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 
 
 class TaskBase(BaseModel):
-    title: str = Field(None, examples=["クリーニングを取りに行く"])
+    title: str = Field(examples=["クリーニングを取りに行く"])
 
 
 class TaskCreate(TaskBase):

@@ -30,7 +30,7 @@ jobs:
 
       - name: Build coverage file
         run: |
-          poetry run pytest --cov-report=term-missing:skip-covered --junitxml=pytest.xml --cov=wadatsumi tests/plain/ | tee pytest-coverage.txt
+          uv run pytest --cov-report=term-missing:skip-covered --junitxml=pytest.xml --cov=wadatsumi tests/plain/ | tee pytest-coverage.txt
     
       - name: Pytest coverage comment
         uses: MishaKav/pytest-coverage-comment@main

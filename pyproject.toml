@@ -36,3 +36,8 @@ dependencies = [
     "types-requests>=2.32.0.20250328",
     "types-ujson>=5.10.0.20250326",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]

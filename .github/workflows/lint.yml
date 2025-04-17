@@ -36,21 +36,7 @@ jobs:
         with:
           # Install a specific version of uv.
           version: "0.5.4"
-
-      - name: load uv dependencies
-        id: cached-uv-dependencies
-        uses: actions/cache@v4.2.3
-        with:
-          path: .venv
-          key: uv-${{ runner.os }}-${{ hashFiles('pyproject.toml', 'uv.lock') }}
-          restore-keys: |
-            uv-${{ runner.os }}-
-
-      - name: Install dependencies
-        if: steps.cached-uv-dependencies.outputs.cache-hit != 'true'
-        run: uv sync
+          enable-cache: true
 
       - name: Run lint
-        env:
-          PYTHONPATH: ${{ github.workspace }}
         run: ./scripts/check.sh

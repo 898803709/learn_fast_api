@@ -1,9 +1,8 @@
 import pytest
 
+
 def add(a: int, b: int) -> int:
     return a + b
-
-
 
 
 @pytest.mark.parametrize(

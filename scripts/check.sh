@@ -20,8 +20,3 @@ if [[ "$CHECK" == "all" || "$CHECK" == "format" || "$CHECK" == "lint" || "$CHECK
     echo "Pythonコードスタイルのチェック中(ruff)..."
     uv run ruff check api tests
 fi
-
-if [[ "$CHECK" == "all"  || "$CHECK" == "lint" || "$CHECK" == "flake8" ]]; then
-    echo "Pythonコードスタイルのチェック中(flake8)..."
-    uv run flake8 --config=scripts/.flake8 api tests
-fi

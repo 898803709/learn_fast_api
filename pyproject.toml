@@ -31,4 +31,8 @@ dependencies = [
     "sqlalchemy==2.0.40",
     "aiomysql==0.2.0",
     "pip>=24.3.1",
+    "types-greenlet>=3.2.0.20250417",
+    "types-jmespath>=1.0.2.20240106",
+    "types-requests>=2.32.0.20250328",
+    "types-ujson>=5.10.0.20250326",
 ]

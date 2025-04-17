@@ -37,8 +37,5 @@ jobs:
           # Install a specific version of uv.
           version: "0.5.4"
 
-      - name: Install dependencies
-        run: uv sync
-
       - name: Run lint
         run: ./scripts/check.sh

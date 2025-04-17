@@ -29,9 +29,8 @@ jobs:
         run: uv sync
 
       - name: Build coverage file
-        run: |
-          uv run pytest --cov-report=term-missing:skip-covered --junitxml=pytest.xml --cov=wadatsumi tests/plain/ | tee pytest-coverage.txt
-    
+        run: uv run pytest --junitxml=pytest.xml  tests | tee pytest-coverage.txt
+
       - name: Pytest coverage comment
         uses: MishaKav/pytest-coverage-comment@main
         with:

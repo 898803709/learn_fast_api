@@ -29,7 +29,7 @@ dependencies = [
     "boto3-stubs==1.40.30",
     "botocore-stubs==1.40.30",
     "sqlalchemy==2.0.43",
-    "aiomysql==0.2.0",
+    "aiomysql==0.3.2",
     "pip>=24.3.1",
     "types-greenlet>=3.2.0.20250417",
     "types-jmespath>=1.0.2.20240106",

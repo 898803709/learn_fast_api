@@ -5,7 +5,7 @@ FROM python:3.12.7
 WORKDIR /app
 
 # Install the 'uv' tool for managing Python dependencies
-RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+RUN pip install --upgrade pip uv==0.9.24
 
 # Update the PATH environment variable to include the 'uv' binary
 ENV PATH="/root/.local/bin:$PATH"
